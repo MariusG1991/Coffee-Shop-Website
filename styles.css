@@ -1,0 +1,486 @@
+/* 
+~~~~~~~~~~~~~~~~~~ 
+GLOBAL STYLES 
+~~~~~~~~~~~~~~~~~~ 
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: hsla(19, 40%, 16%, 1);
+  --color-secondary: hsla(45, 44%, 73%, 1);
+  --color-tertiary: hsla(35, 67%, 39%, 1);
+  --color-white: #fff;
+  --max-width: 1140px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: hsl(37, 30%, 85%);
+  color: var(--color-white);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 4rem;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~ 
+HELPER CLASSES 
+~~~~~~~~~~~~~~~~~~ 
+*/
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.section {
+  padding-top: 7.5rem;
+  padding-bottom: 10rem;
+}
+
+.btn {
+  font-size: 1.125rem;
+  background-color: var(--color-primary);
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: hsla(19, 40%, 23%, 1);
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~ 
+HEADER 
+~~~~~~~~~~~~~~~~~~ 
+*/
+.header {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.links a {
+  font-size: 1.125rem;
+  padding: 0.5em;
+  transition: all 0.2s ease;
+  border-radius: 0.5em;
+}
+
+.links a:hover {
+  background-color: hsla(19, 40%, 23%, 1);
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~ 
+HERO 
+~~~~~~~~~~~~~~~~~~ 
+*/
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-position-x: left;
+  min-height: 100vh;
+}
+
+.hero-content {
+  position: absolute;
+  right: 20%;
+  top: 25%;
+  min-width: 30rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  padding: 0.5em 2em;
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~ 
+MENU SECTION  
+~~~~~~~~~~~~~~~~~~ 
+*/
+.menu h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
+
+.menu-item {
+  background-color: var(--color-secondary);
+  max-width: 360px;
+  min-height: 570px;
+  border-radius: 90px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.2s ease;
+  cursor: pointer;
+  flex-shrink: 1;
+}
+
+.menu-item:hover {
+  transform: scale(1.03);
+}
+
+.menu-item h3 {
+  color: var(--color-primary);
+  padding-top: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+  max-width: 15rem;
+  margin: auto;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.pages {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.page {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: hsla(19, 40%, 16%, 0.3);
+  border-radius: 50%;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--color-primary);
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~ 
+ABOUT SECTION  
+~~~~~~~~~~~~~~~~~~ 
+*/
+.about {
+  background-image: url("./img/pexels-afta-putta-gunawan-683039\ 1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-background {
+  background: rgba(56, 34, 24, 0.8);
+  backdrop-filter: blur(10px);
+  width: 50%;
+  height: 100vh;
+}
+
+.about-content {
+  margin-left: auto;
+  width: 60%;
+  padding-right: 2rem;
+}
+
+.about-content h2 {
+  color: var(--color-white);
+  text-align: center;
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+}
+
+.about-content h3 {
+  color: var(--color-white);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  max-width: 30rem;
+  font-size: 1.25rem;
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~ 
+CONTACT SECTION
+~~~~~~~~~~~~~~~~~~ 
+*/
+.contact h2 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form input,
+textarea,
+button {
+  display: block;
+  font-family: inherit;
+  width: 80%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+form textarea {
+  resize: none;
+}
+
+.form {
+  width: 50%;
+  padding-left: 4rem;
+}
+
+.form input,
+.form textarea {
+  border-bottom: 2px solid var(--color-primary);
+  padding: 0.5em;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+::placeholder {
+  color: var(--color-tertiary);
+  font-weight: bold;
+}
+
+.form-btn {
+  margin-top: 4rem;
+  padding: 0.5em 0;
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.contact-info {
+  width: 50%;
+  padding-left: 5rem;
+}
+
+.contact-info h4 {
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.contact-info p {
+  color: var(--color-tertiary);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+/* 
+~~~~~~~~~~~~~~~~~~ 
+FOOTER 
+~~~~~~~~~~~~~~~~~~ 
+*/
+.footer {
+  background-color: var(--color-primary);
+  padding: 4rem 0;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.copyright {
+  margin-top: 3rem;
+  text-align: right;
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~ 
+MEDIA QUERIES
+~~~~~~~~~~~~~~~~~~ 
+*/
+
+@media (max-width: 1240px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-content {
+    right: 5%;
+  }
+
+  .about-content h2 {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+  }
+
+  .menu-wrapper {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
+
+  .about-content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 780px) {
+  h1 {
+    font-size: 3.25rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 0;
+    padding-top: 2rem;
+  }
+
+  .links {
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-content {
+    right: 20%;
+    transform: translateX(50%);
+  }
+
+  .hero-btn {
+    text-align: center;
+  }
+
+  .menu-item {
+    max-width: 260px;
+    min-height: 500px;
+  }
+
+  .about-content {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .about-background {
+    overflow: auto;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .form,
+  .contact-info {
+    width: 100%;
+  }
+
+  .form {
+    margin-bottom: 4rem;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+}
